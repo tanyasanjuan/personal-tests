@@ -37,7 +37,7 @@ z = float(10) # z is now of type float
 print(x)
 print(y)
 print(z)
-print(type(x)) # prints the type of x
+print(type(x)) # prints the type of x, to check the type of a variable "class 'int'"
 print(type(y)) # prints the type of y   
 print(type(z)) # prints the type of z
 
@@ -166,9 +166,11 @@ def myfunc():
     x = "maravilloso" # create a global variable
 myfunc() # call the function to create the global variable
 print("Python es " + x) # prints "Python es maravilloso" because x is now a global variable
-# Also, we can use the global keyword to change a global variable inside a function
+
+# To change the value of a global variable inside a function, we can use the global keyword
 x = "increible" # global variable
 def myfunc():
     global x # declare x as a global variable
     x = "fantastico" # change the global variable
 myfunc() # call the function to change the global variable
+print("Python es " + x) # prints "Python es fantastico" because x is now changed
