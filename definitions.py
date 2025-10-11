@@ -166,3 +166,9 @@ def myfunc():
     x = "maravilloso" # create a global variable
 myfunc() # call the function to create the global variable
 print("Python es " + x) # prints "Python es maravilloso" because x is now a global variable
+# Also, we can use the global keyword to change a global variable inside a function
+x = "increible" # global variable
+def myfunc():
+    global x # declare x as a global variable
+    x = "fantastico" # change the global variable
+myfunc() # call the function to change the global variable
