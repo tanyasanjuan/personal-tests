@@ -52,17 +52,23 @@ print(resultado) # prints True, because the first condition is True and the seco
 # but "or" returns True if one condition is True
 
 # identity operators
+# "is" returns True if both variables are the same object
+
 x = ["apple", "banana"]
 y = ["apple", "banana"]
 z = x
-print(x == y) # prints True, because x is equal to y
-
 print(x is z) # prints True, because z is the same object as x
 print(x is y) # prints False, because x is not the same object as y, even if they have the same content
-# "is" returns True if both variables are the same object
 
-print(x is z) # prints True, because z is the same object as x
-print(x is y) # prints False, because y is a different object
+print(x == y) # prints True, because x is equal to y (both have the same content)
+
+# "is not" returns True if both variables are not the same object
+x = ["apple", "banana"]
+y = ["apple", "banana"]
+z = x
+print(x is not z) # prints False, because x is the same object as z
+print(x is not y) # prints True, because x is not the same object as y
+print(x != y) # prints False, because x is equal to y (both have the same content)
 
 # functions can return a boolean value
 def myFunction():
