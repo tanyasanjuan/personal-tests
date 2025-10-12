@@ -9,6 +9,15 @@
 
 print ("Hello, World!")  
 
+# assigning a string to a variable and printing it
+a = "Hi, World!"
+print(a)
+
+# strings are arrays of bytes representing unicode characters
+# we can access the characters of a string using indexing 
+print(a[0]) # prints H, the first character of the string
+print(a[1]) # prints i, the second character of the string
+
 if 5 > 2:
     print("Five is greater than two!")  # Indented block
 
