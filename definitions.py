@@ -1,7 +1,5 @@
 # Rules for write in python
-# Indentation is very important in python
-    # Indentation is used to define a block of code
-    # Use 4 spaces per indentation level
+
 # Comments start with a #, and Python will ignore them
 # strings can be defined with single or double quotes, both are correct
 # a = "Hi"
@@ -17,6 +15,17 @@ print(a)
 # we can access the characters of a string using indexing 
 print(a[0]) # prints H, the first character of the string
 print(a[1]) # prints i, the second character of the string
+
+# since string are arrays we can loop through them, with a "for" loop
+for x in "banana":
+    print(x) # prints each character of the string "banana"
+
+# to get the length of a string we can use the len() function
+print(len(a)) # prints 10, the length of the string "Hi, World!"
+
+# Indentation is very important in python
+    # Indentation is used to define a block of code
+    # Use 4 spaces per indentation level
 
 if 5 > 2:
     print("Five is greater than two!")  # Indented block
