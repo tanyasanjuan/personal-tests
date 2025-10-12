@@ -52,3 +52,41 @@ print(reemplazo.replace("Mundo", "Universo")) # prints "Hola Universo"
 # Split a string into a list where each word is a list item
 division = "Hola Mundo, bienvenidos a Python"
 print(division.split()) # prints ['Hola', 'Mundo,', 'bienvenidos', 'a', 'Python']
+
+# we can't combine strings and numbers, for example:
+# age = 36
+# txt = "My name is John, I am " + age
+# print(txt) # this will raise an error because age is an integer and cannot be concatenated to a string
+# but we can convert the number into a string before concatenation
+
+# concatenate strings and numbers with the str() function
+age = 36
+txt = "My name is John, I am " + str(age)
+print(txt) # prints My name is John, I am 36
+
+# we can also use the format() method to concatenate strings and numbers
+age = 36
+txt = "My name is John, I am {}".format(age)
+print(txt) # prints My name is John, I am 36
+
+# we can write it in a simpler way with f-strings (available in Python 3.6 and later)
+# To specify a string as an f-string, put an f in front of the string, 
+# and add curly brackets {} as placeholders for variables and other operations.
+age = 36
+txt = f"My name is John, I am {age}"
+print(txt) # prints My name is John, I am 36
+
+# a placeholder to display the result of an expression inside a string
+price = 5
+txt = f"The price is {price} dollars"
+print(txt) # prints The price is 5 dollars
+
+# the placeholder can include a modifier to format the result
+price = 49
+txt = f"The price is {price:.2f} dollars" # .2f means 2 decimal places
+print(txt) # prints The price is 49.00 dollars
+
+# a placeholder to display the result of a mathematical operation inside a string
+price = 49
+txt = f"The price is {price + 1} dollars"
+print(txt) # prints The price is 50 dollars
