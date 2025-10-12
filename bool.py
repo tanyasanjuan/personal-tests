@@ -48,7 +48,21 @@ x = 10
 y = 20
 
 resultado = (x > 5 and y < 25) or not(x == 10)
-print(resultado) # prints True, because the first condition is True and the second is False, but "or" returns True if one condition is True
+print(resultado) # prints True, because the first condition is True and the second is False,
+# but "or" returns True if one condition is True
+
+# identity operators
+x = ["apple", "banana"]
+y = ["apple", "banana"]
+z = x
+print(x == y) # prints True, because x is equal to y
+
+print(x is z) # prints True, because z is the same object as x
+print(x is y) # prints False, because x is not the same object as y, even if they have the same content
+# "is" returns True if both variables are the same object
+
+print(x is z) # prints True, because z is the same object as x
+print(x is y) # prints False, because y is a different object
 
 # functions can return a boolean value
 def myFunction():
