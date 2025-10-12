@@ -90,3 +90,53 @@ print(txt) # prints The price is 49.00 dollars
 price = 49
 txt = f"The price is {price + 1} dollars"
 print(txt) # prints The price is 50 dollars
+
+# scape characters
+# to include special characters in a string, we can use the backslash \ as an escape character
+# for example, to include a double quote in a string that is enclosed in double quotes,
+escapes = "We are the so-called \"Vikings\" from the north."
+print(escapes) # prints We are the so-called "Vikings" from the north.
+
+# other escape characters are:
+# \' 	Single Quote
+txt = "It\'s alright."
+print(txt) # prints It's alright.
+
+# \\ 	Backslash
+txt = "This is a backslash: \\"
+print(txt) # prints This is a backslash: \
+
+# \n 	New Line
+txt = "Hello\nWorld!"
+print(txt)
+# \r 	Carriage Return
+txt = "Hola\rborola!"
+print(txt)
+# \t 	Tab
+# \b 	Backspace
+# \f 	Form Feed
+# \ooo 	Octal value
+# \xhh 	Hex value
+
+# string methods
+# there are many string methods available in Python, here are some examples:    
+print(saludo.capitalize()) # Capitalizes the first letter of the string
+print(saludo.count("o")) # Counts the number of occurrences of a substring in the string (letter o appears 2 times in "Hello, World!")
+
+# Finds the first occurrence of a substring in the string 
+# (returns the index of the first character of the substring, 
+# in this case it returns 7, because "World" starts at index 7 in "Hello, World!")
+print(saludo.find("World")) 
+
+# Here it returns 1, because "e" is the second character in "Hello, World!" (index starts at 0)
+print(saludo.find("e"))
+
+# Finds the first occurrence of "l" between index 1 and 10, returns 2
+# 2 is the index of the first "l" in "Hello, World!" after index 1
+print(saludo.find("l", 1, 10)) # Finds the first occurrence of "l" between index 1 and 10, returns 2
+
+# if the substring is not found, it returns -1
+print(saludo.find("k")) # returns -1 because "k" is not found
+
+print(saludo.isalpha()) # Checks if all characters in the string are alphabetic
+print(saludo.isdigit()) # Checks if all characters in the string are digits
