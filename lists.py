@@ -103,3 +103,32 @@ print(morefruits)
 tuplefruits = ("papaya", "jackfruit")
 morefruits.extend(tuplefruits)
 print(morefruits)
+
+# remove items
+# we can use the remove() method to remove an item by value
+# if there are multiple items with the same value, only the first occurrence is removed
+# example: remove two items with the value "pear"
+morefruits.remove("pear")
+print(morefruits)
+
+# remove an item by index number, with the pop() method
+# if no index is specified, the last item is removed
+morefruits.pop()
+print(morefruits)
+
+# we can remove the second item (index 1)
+morefruits.pop(1)
+print(morefruits)
+
+# we can use the "del" keyword to remove an item by index number
+# example: remove the item at index 0 (first item of the list)
+del morefruits[0]
+print(morefruits)
+
+# we can delete the entire list with the "del" keyword
+# del morefruits
+# print(morefruits) # this will raise an error because the list no longer exists
+
+# we can use the clear() method to empty the list
+morefruits.clear()
+print(morefruits) # prints [], an empty list
