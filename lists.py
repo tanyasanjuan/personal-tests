@@ -89,3 +89,17 @@ print(morefruits)
 # we can use the insert() method to add an item at a specified index
 morefruits.insert(2, "dragonfruit")
 print(morefruits)
+
+# we can use the append() method to add an item at the end of the list
+morefruits.append("coconut")
+print(morefruits)
+
+# we can use the extend() method to add multiple items at the end of the list
+morefruits.extend(["grapefruit", "tangerine"])
+print(morefruits)
+
+# we can add any iterable (tuples, sets, dictionaries) with the extend() method
+# add a tuple to the list
+tuplefruits = ("papaya", "jackfruit")
+morefruits.extend(tuplefruits)
+print(morefruits)
