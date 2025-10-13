@@ -57,3 +57,35 @@ print(morefruits[-4:-1]) # prints ['pear', 'peach', 'plum'], from the 4th last i
 # check if an item exists in a list, with the "in" keyword
 if "kiwi" in morefruits:
     print("Yes, 'kiwi' is in the list of fruits") # prints Yes, 'kiwi' is in the list of fruits
+
+# Change item values
+# List: ["mango", "kiwi", "watermelon", "pear", "peach", "plum", "pomegranate"]
+# change the second item (index 1) to "blackcurrant"
+morefruits[1] = "blackcurrant" 
+print(morefruits) # prints the list with the changed item (kiwi changed to blackcurrant)
+
+# Change the items, using the range of index numbers
+# List: ["mango", "kiwi", "watermelon", "pear", "peach", "plum", "pomegranate"]
+morefruits[1:3] = ["blueberry", "raspberry"]
+print(morefruits) # prints the list with the changed items (kiwi and watermelon changed to blueberry and raspberry)
+
+# Change items, but with a range of item values, adding more items.
+# List ["mango", "kiwi", "watermelon", "pear", "peach", "plum", "pomegranate"]
+# change the second (index 1  to "blueberry") 
+# a second element is added in index 2 to "raspberry"
+morefruits[1:2] = ["blueberry", "raspberry"] 
+print(morefruits) 
+# the number of items in the list has increased
+# List: ["mango", "blueberry", "raspberry", "watermelon", "pear", "peach", "plum", "pomegranate"]
+# the list now has 8 items
+# we replaced one item (kiwi) with two items (blueberry and raspberry)    
+
+# to decrease the number of items in a list, we can use the range of index numbers to replace with fewer items
+# List: ["mango", "blueberry", "raspberry", "watermelon", "pear", "peach", "plum", "pomegranate"]
+morefruits[1:3] = ["kiwi"] 
+print(morefruits)
+
+# insert items
+# we can use the insert() method to add an item at a specified index
+morefruits.insert(2, "dragonfruit")
+print(morefruits)
