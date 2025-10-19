@@ -47,6 +47,12 @@ uppercased_fruits = [fruit.upper() for fruit in my_list]
 print(uppercased_fruits)  # Output: ['BANANA', 'MANZANA', 'FRESA']
 
 # - We want to filter elements based on a condition
+# the syntax is: [expression for item in iterable if condition == True]
+# the return value is a new list, leaving the original list unchanged
+# condition is like a filter that only accepts items that evaluate to True (listed items)
+# The condition if x != "banana" will return True for all elements other than "banana"
+# making the new list contain all fruits except "banana".
+# the condition is optional, and can be omitted.
 my_list = ["banana", "manzana", "fresa", "kiwi", "mango"]
 filtered_fruits = [fruit for fruit in my_list if "a" in fruit]
 print(filtered_fruits)  # Output: ['banana', 'manzana', 'fresa', 'mango']
@@ -54,3 +60,12 @@ print(filtered_fruits)  # Output: ['banana', 'manzana', 'fresa', 'mango']
 # to generate even numbers from 0 to 10
 even_numbers = [num for num in range(11) if num % 2 == 0]
 print(even_numbers)  # Output: [0, 2, 4, 6, 8, 10]
+
+# The iterable can be any iterable object, like a list, tuple, set, etc.
+# We can use range() to generate a sequence of numbers
+nuevalista = [x for x in range(10)]
+print(nuevalista)  # Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# we can add a condition to filter the numbers
+nuevalista = [x for x in range(10) if x < 5]
+print(nuevalista)  # Output: [0, 1, 2, 3, 4]
