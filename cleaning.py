@@ -99,3 +99,23 @@ print(df.to_string)
 # in the dataset can be a typo error.
 df.loc[7, 'Duration'] = 45
 print(df.to_string())
+
+# To replace wrong data for larger data sets we can create some rules, 
+# e.g. set some boundaries for legal values, and replace any values that are outside of the boundaries.
+# If the value is higher than 120, set it to 120:
+for x in df.index:
+    if df.loc[x, "Duration"] > 120:
+        df.loc[x, "Duration"] = 120
+print(df.to_string())
+
+# Removing rows, that contains wrong data
+# This way we don't have to find out what to replace them with, 
+# and there is a good chance we don't need them to do the analyses.
+# Delete rows where "Duration" is higher than 120:
+
+for x in df.index:
+    if df.loc[x, "Duration"] > 120:
+        df.loc(x, inplace = True)
+print(df.to_string())
+# include the 'inplace = True' argument to make the changes in the original DataFrame object 
+# instead of returning a copy
