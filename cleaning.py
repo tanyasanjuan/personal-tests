@@ -6,7 +6,6 @@
 # Wrong format ("Date" in row 26). Wrong data ("Duration" in row 7).
 # Duplicates (row 11 and 12).
 
-
 import pandas as pd
 df = pd.read_csv('toclean.csv')
 print(df)
@@ -115,7 +114,23 @@ print(df.to_string())
 
 for x in df.index:
     if df.loc[x, "Duration"] > 120:
-        df.loc(x, inplace = True)
+        df.drop(x, inplace = True)
 print(df.to_string())
 # include the 'inplace = True' argument to make the changes in the original DataFrame object 
 # instead of returning a copy
+
+
+# Removing duplicates
+# This data set has duplicates rows (row 11 and 12)
+# To discover duplicates, we can use the duplicated() method.
+# The duplicated() method returns a Boolean values for each row:
+# Returns 'True' for every row that is a duplicate, otherwise False:
+print(df.duplicated())
+
+# To remove duplicates we can use 'drop_duplicates()' method
+# Remove all duplicates:
+df.drop_duplicates(inplace=True)
+print(df.to_string())
+# result: row 12 has been removed from the result
+# The (inplace = True) will make sure that the method does NOT return a new DataFrame, 
+# but it will remove all duplicates from the original DataFrame.
