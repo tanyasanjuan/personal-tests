@@ -88,6 +88,21 @@ print (mivariable.loc["dia2"])
 # Load files into a DataFrame
 # If a data set is stored in a file, Pandas can Load it into a DataFrame
 # Load a CSV (Comma Separated file) into a DataFrame
+# If the DataFrame have many rows, Panda will return the first and last 5 rows.
+df = pd.read_csv('dataprueba.csv')
+print(df)
 
+# Read CSV files
+# To print the entire DataFrame we use 'to_string()'
+#print(df.to_string())
+
+# max_rows
+# The number of rows returned is defined in Pandas option settings
+# We can check the system's max rows with the 'pd.options.display.max_rows' statement.
+print(pd.options.display.max_rows)
+# this system will return '60', meaning that the DataFrame contains more than 60 rows. 
+
+# however we can change the maximum rows number with the same statement. 
+pd.options.display.max_rows = 9999
 df = pd.read_csv('dataprueba.csv')
 print(df)
