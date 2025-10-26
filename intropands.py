@@ -85,5 +85,9 @@ print(mivariable)
 # retur "dia2", referring to the named index:
 print (mivariable.loc["dia2"])
 
-#df = pd.read_csv('dataprueba.csv')
-#print(df.to_string())
+# Load files into a DataFrame
+# If a data set is stored in a file, Pandas can Load it into a DataFrame
+# Load a CSV (Comma Separated file) into a DataFrame
+
+df = pd.read_csv('dataprueba.csv')
+print(df)
