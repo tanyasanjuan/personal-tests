@@ -41,7 +41,7 @@ print(df.to_string())
 # Replace values in the "calories" columns with the number 130
 df.fillna({"Calories": 130}, inplace=True)
 # Result: This operation inserts 130 in empty cells in the "Calories" column (row 18 and 28).
-"""
+
 
 # Replace using mean() median() and mode()
 # A way to replace empty cells, is to calculate the mean, median or mode value of the column.
@@ -51,4 +51,14 @@ print(df.to_string())
 # In row 18 and 28, the empty values from "Calories" was replaced with the mean: 304.68
 # Mean = the average value (the sum of all values divided by number of values).
 
-
+# Calculate the Median and replace the values whit it.
+# Median = the value in the middle, after sorted all values ascending.
+x = df["Calories"].median()
+df.fillna({"Calories": x}, inplace=True)
+print(df.to_string())
+# row 18 and 28, the empty values from "Calories" was replaced with the median: 291.2
+"""
+# Calculate the Mode, and replace the values whit it.
+x = df["Calories"].mode()[0]
+df.fillna({"Calories":x}, inplace=True)
+print(df.to_string)
