@@ -57,8 +57,45 @@ x = df["Calories"].median()
 df.fillna({"Calories": x}, inplace=True)
 print(df.to_string())
 # row 18 and 28, the empty values from "Calories" was replaced with the median: 291.2
-"""
+
 # Calculate the Mode, and replace the values whit it.
+# Mode = the value that appears most frequently.
 x = df["Calories"].mode()[0]
 df.fillna({"Calories":x}, inplace=True)
 print(df.to_string)
+# Results: in row 18 and 28, the empty value from "Calories" was replaced with the mode: 300.0
+"""
+# Data of Wromg Format
+# Cells with wrong format make difficult to analyze data
+# To fix it, we have two options: 
+# remove the rows, or convert all cells in the columns into the same format.
+
+# In the Data Frame, we have two cells with the wrong format. 
+# Row 22 and 26, the 'Date' column should be a string that represents a date:
+# Row 22: NaN, row 26: 20201226
+
+# Convert the cells in the 'Date' column into dates.
+# Pandas has a 'to_datetime()' method:
+df['Date'] = pd.to_datetime(df['Date'], format='mixed')
+print(df.to_string())
+# Result, the date in row 26 was fixed, but the empty date in row 22 got a NaT (Not a Time) value, 
+# in other words an empty value. One way to deal with empty values is simply removing the entire row.
+
+# Removing rows
+# NaT value, can be handled as a NULL value,
+# and we can remove the row by using the dropna() method.
+
+df.dropna(subset=['Date'], inplace=True)
+print(df.to_string)
+
+# Fixing wrong data
+# "Wrong data" does not have to be "empty cells" or "wrong format", 
+# it can just be wrong, like if someone registered "199" instead of "1.99".
+# in the dataset in row 7, the duration is 450, but for all the other rows the duration is between 30 and 60.
+# taking in consideration that this is the data set of someone's workout sessions, 
+# we conclude with the fact that this person did not work out in 450 minutes.
+
+# One way to fix wrong values is to replace them
+# in the dataset can be a typo error.
+df.loc[7, 'Duration'] = 45
+print(df.to_string())
