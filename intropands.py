@@ -103,6 +103,17 @@ print(pd.options.display.max_rows)
 # this system will return '60', meaning that the DataFrame contains more than 60 rows. 
 
 # however we can change the maximum rows number with the same statement. 
-pd.options.display.max_rows = 9999
+#pd.options.display.max_rows = 9999
+#df = pd.read_csv('dataprueba.csv')
+#print(df)
+
+# Viewing Data
+# The 'head()' method returns the headers and a specified number of rows, from the top
 df = pd.read_csv('dataprueba.csv')
-print(df)
+print(df.head(10)) #10 number of rows.
+
+# If the number of rows is not specified, the head() method will return the top 5 rows.
+#print(df.head()) 
+
+# The 'tail()' method returns the headers and specified number of rows, from the bottom.
+print(df.tail())
