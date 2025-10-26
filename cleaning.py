@@ -14,7 +14,7 @@ print(df)
 # Empty cells, can give wrong results
 # We can remove rows that cointan empy cells
 # This is okay, when the dataset is not very big and remove a few rows will not have big impact.
-
+"""
 # The dropna() method returns a new DataFrame, and will not change the original.
 new_df = df.dropna()
 print(new_df.to_string())
@@ -34,4 +34,21 @@ print(df.to_string())
 df.fillna(130, inplace=True)
 print(df.to_string())
 # result: empty cells got the value 130 or 130.0 (in row 18, 22 and 28).
+
+# Replace only for specified columns, instead to replace all empty cells in the whole DF
+# We can replace, specifying the column name. 
+
+# Replace values in the "calories" columns with the number 130
+df.fillna({"Calories": 130}, inplace=True)
+# Result: This operation inserts 130 in empty cells in the "Calories" column (row 18 and 28).
+"""
+
+# Replace using mean() median() and mode()
+# A way to replace empty cells, is to calculate the mean, median or mode value of the column.
+x = df["Calories"].mean()
+df.fillna({"Calories": x}, inplace=True)
+print(df.to_string())
+# In row 18 and 28, the empty values from "Calories" was replaced with the mean: 304.68
+# Mean = the average value (the sum of all values divided by number of values).
+
 
