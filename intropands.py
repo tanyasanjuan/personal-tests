@@ -117,3 +117,11 @@ print(df.head(10)) #10 number of rows.
 
 # The 'tail()' method returns the headers and specified number of rows, from the bottom.
 print(df.tail())
+
+# Info about the DataFrame.
+# The method 'info()', gives the information about the data set.
+print(df.info())
+# Results: there are 169 rows and 4 columns. And the name of each column, with the data type: int64, float64
+# how many Non-Null values there are present in each column, 
+# there are 164 of 169 Non-Null values in the "Calories" column.
+# means that there are 5 rows with no value at all, in the "Calories" column.
