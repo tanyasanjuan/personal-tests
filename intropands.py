@@ -74,5 +74,16 @@ print(mivariable.loc[0])
 # when using [], the result is a Pandas DataFrame
 print(mivariable.loc[[0,1]])
 
+# Named indexes
+# with the index argument, we can name our indexes.
+# adding list of names to give each row a name:
+mivariable = pd.DataFrame(data, index = ["dia1", "dia2", "dia3"])
+print(mivariable)
+
+# Locate Named Indexes
+# Use the named index in the 'loc' attribute to return the specified row(s)
+# retur "dia2", referring to the named index:
+print (mivariable.loc["dia2"])
+
 #df = pd.read_csv('dataprueba.csv')
 #print(df.to_string())
