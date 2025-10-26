@@ -27,3 +27,11 @@ df.dropna(inplace=True)
 print(df.to_string())
 # The result that some rows have been removed (row 18, 22 and 28), because they had empty values.
 
+
+# Replace empty values. 
+# Another way of dealing with empty cells is to insert a new value.
+# The fillna() method allows to replace empty cells with a value:
+df.fillna(130, inplace=True)
+print(df.to_string())
+# result: empty cells got the value 130 or 130.0 (in row 18, 22 and 28).
+
