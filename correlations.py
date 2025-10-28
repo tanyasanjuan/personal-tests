@@ -37,3 +37,14 @@ print(df.corr())
 import matplotlib.pyplot as plt
 df.plot()
 plt.show()
+# The plot() method will create a line for each column in the DataFrame.
+# The plt.show() method will display the diagram.
+
+# Kind argument
+# The plot() method can take an argument called 'kind' to specify the kind of diagram.
+# If we want a scatter plot, we need to specify an X and Y axis.
+
+# Here we will create a scatter plot, with "Duration" on the X axis, and "Calories" on the Y axis:
+df.plot(kind='scatter', x='Duration', y='Calories')
+plt.show()
+# The result will be a scatter plot diagram, with dots representing the values from the two columns
