@@ -30,3 +30,10 @@ print(df.corr())
 # Bad correlation: "Duration" and "Maxpulse" got a 0.009403 correlation, 
 # which is a very bad correlation, meaning that we can not predict the max pulse 
 # by just looking at the duration of the work out, and vice versa.
+
+# Plotting
+# Pandas use the plot() method to create diagrams.
+# we can use pyplot, a submodule of the Matplotlib library, to show the diagrams.
+import matplotlib.pyplot as plt
+df.plot()
+plt.show()
