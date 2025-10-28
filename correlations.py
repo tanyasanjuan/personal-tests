@@ -48,3 +48,26 @@ plt.show()
 df.plot(kind='scatter', x='Duration', y='Calories')
 plt.show()
 # The result will be a scatter plot diagram, with dots representing the values from the two columns
+# A scatter plot is used to see the relationship between two columns.
+# the correlation between "Duration" and "Calories" was 0.922721, 
+# and we concluded with the fact that higher duration means more calories burned.
+# In the scatter plot, we can see that most dots are going upwards,
+# which confirms our conclusion that higher duration means more calories burned.
+
+# We can also create other kinds of diagrams, like a bar diagram:
+df.plot(kind='bar')
+plt.show()
+
+# Scatterplot where there are not relationship between the two columns:
+# "Duration" and "Maxpulse", with the correlation 0.009403:
+df.plot(kind='scatter', x='Duration', y='Maxpulse')
+plt.show()
+
+# Histogram:
+# We can use the kind argument to specify that you want a histogram.
+# A histogram needs only one column.
+# A histogram shows the frequency of each interval, 
+# e.g. how many workouts lasted between 50 and 60 minutes?
+df["Duration"].plot(kind='hist')
+plt.show()
+# The histogram tells us that there were over 100 workouts that lasted between 50 and 60 minutes.
